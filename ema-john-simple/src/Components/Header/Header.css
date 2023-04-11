@@ -1,0 +1,21 @@
+.header{
+    background-color: #1C2B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+}
+.header .img-box{
+   display: flex;
+   align-items: center;
+}
+.header img{
+    width: 140px;
+}
+.header .menu a{
+   text-decoration: none;
+   color: white;
+   margin: 0px 20px;
+   font-size: 17px;
+   letter-spacing: 0.5%;
+}
