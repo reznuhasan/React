@@ -7,13 +7,13 @@ const Product=(props)=>{
            <img src={img} alt="" />
            <div className="details">
            <h3>{name.slice(0,20)}</h3>
-           <h4>Price:${price}</h4>
+           <h4>Price: ${price}</h4>
            </div>
            <div className="ratings">
-           <p>Manufacture:{seller}</p>
-           <p>Rating:{ratings}</p>
+           <p>Manufacture: {seller}</p>
+           <p>Rating: {ratings} star</p>
            </div>
-           <button>Add To Cart</button>
+           <button onClick={()=>props.AddProduct(props.product)}>Add To Cart</button>
         </div>
     )
 }
