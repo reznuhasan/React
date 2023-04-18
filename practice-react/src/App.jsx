@@ -24,10 +24,13 @@ function App() {
   const sendData=(value)=>{
     setStudents([...students,{...value,id:students.length+1}])
   }
+  const handleDelete=(id)=>{
+    setStudents(students.filter(student=>student.id!==id))
+  }
   return (
     <div className="App">
       {
-        students.map(student=><ShowStudent student={student}></ShowStudent>)
+        students.map(student=><ShowStudent handleDelete={handleDelete} student={student}></ShowStudent>)
       }
       <AddDetails sendData={sendData}></AddDetails>
       <PlayButton message={message} handleClick={handleClick}>{(playing)?"Play":"Pause"}</PlayButton>
