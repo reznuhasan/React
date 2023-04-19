@@ -27,12 +27,21 @@ function App() {
   const handleDelete=(id)=>{
     setStudents(students.filter(student=>student.id!==id))
   }
+  const [updateData,setUpdateData]=useState(null)
+  const handleEdit=(id)=>{
+    setUpdateData(students.find(student=>student.id===id))
+  }
+  const [changeData,setChangeData]=useState({})
+  const changeVideos=(value)=>{
+    const newArr=(students.filter(student=>student.id!==value.id))
+    setStudents([...newArr,value])
+  }
   return (
     <div className="App">
       {
-        students.map(student=><ShowStudent handleDelete={handleDelete} student={student}></ShowStudent>)
+        students.map(student=><ShowStudent handleEdit={handleEdit} handleDelete={handleDelete} student={student} ></ShowStudent>)
       }
-      <AddDetails sendData={sendData}></AddDetails>
+      <AddDetails sendData={sendData} updateData={updateData} changeVideos={changeVideos}></AddDetails>
       <PlayButton message={message} handleClick={handleClick}>{(playing)?"Play":"Pause"}</PlayButton>
     </div>
   )
