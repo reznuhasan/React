@@ -1,8 +1,11 @@
 import ReactDOM from "react-dom/client"
+import Header from "./components/Header"
+import Service from "./components/Service"
 const App=()=>{
     return (
         <div>
-            <h1>Hello React</h1>
+            <Header/>
+            <Service/>
         </div>
     )
 }
