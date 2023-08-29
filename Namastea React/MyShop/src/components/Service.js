@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
 import Product from "./Product"
+import { Link } from "react-router-dom"
 
 const Service = () => {
   const [allProducts,setAllProducts]=useState([])
@@ -36,7 +37,7 @@ const Service = () => {
        (filterProducts.length===0)?<div><h1>Product is not found</h1></div>:
        <div className="filterProducts">
         {
-          filterProducts.map(product=><Product product={product} key={product.id}></Product>)
+          filterProducts.map(product=><Link to={`/product/${product.id}`} key={product.id}><Product product={product} key={product.id}></Product></Link>)
         }
        </div>
       }

@@ -5,7 +5,12 @@
     border: 1px solid salmon;
     padding: 0 10px;
 }
-.header .logo h1{
+a{
+    text-decoration: none;
+    color: black;
+}
+.header .logo h1 a{
+    text-decoration: none;
     color: yellowgreen;
 }
 .header .menu ul{
@@ -17,11 +22,15 @@
     color: goldenrod;
     font-size: 17px;
 }
+.header .menu ul li a{
+    text-decoration: none;
+}
 .filterProducts{
     display: flex;
     flex-wrap: wrap;
     padding: 10px 20px;
     gap:20;
+    justify-content: center;
 }
 .card{
     width: 350px;
@@ -38,12 +47,14 @@
     padding: 10px 20px;
     gap:20;
     margin-top: 30px;
+    justify-content: center;
 }
 .shimmer{
     width: 350px;
-    border: 1px solid gray;
+    border: 1px solid grey;
     padding: 5px 10px;
     height: 350px; 
+    background-color: #f0f0f0;
 }
 .shimmer .image{
     width: 100%;
@@ -65,4 +76,19 @@
     background-color: aquamarine;
     border: none;
     color: darkgreen;
+}
+.product-detail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product-details{
+    width: 350px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    margin: 20px 0;
+}
+.product-details .image img{
+    width: 100%;
+    height: 150px;
 }

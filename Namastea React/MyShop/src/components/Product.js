@@ -1,8 +1,9 @@
 
 import React from 'react'
 
-const Product = ({product}) => {
+const Product = React.memo(({product}) => {
     const {title,rating,brand,category,thumbnail,price}=product;
+    console.log("re -render")
   return (
     <div className='card'>
       <div className="image">
@@ -14,6 +15,6 @@ const Product = ({product}) => {
       <h2>Price:{price}</h2>
     </div>
   )
-}
+})
 
 export default Product
