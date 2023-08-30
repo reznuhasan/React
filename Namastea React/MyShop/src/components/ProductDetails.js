@@ -2,17 +2,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import Shimmer from "./Shimmer";
+import useProduct from "../Helper/useProduct";
 const ProductDetails = () => {
-    const [product, setProduct] = useState(null)
     const { id } = useParams();
-    const loadData = async () => {
-        const response = await fetch(`https://dummyjson.com/products/${id}`)
-        const data = await response.json();
-        setProduct(data)
-    }
-    useEffect(() => {
-        loadData();
-    }, [])
+    const product=useProduct(id);
     return product === null ? (
        <div style={{
         "display":"flex",

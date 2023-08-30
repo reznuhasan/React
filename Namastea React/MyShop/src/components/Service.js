@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
 import Product from "./Product"
+import { FindProducts } from "../Helper/Utljs"
 import { Link } from "react-router-dom"
+import useOnline from "../Helper/useOnline"
 
 const Service = () => {
   const [allProducts,setAllProducts]=useState([])
@@ -17,7 +19,12 @@ const Service = () => {
     setAllProducts(data?.products)
   }
   const handleSearch=()=>{
-    setFilterProducts(allProducts.filter(product=>product?.title.toLowerCase().includes(searchText.toLowerCase())))
+    setFilterProducts(FindProducts(allProducts,searchText))
+  }
+  const online=useOnline();
+  console.log(online)
+  if(!online){
+    return <h1>Your are Offline.please check your internet connection</h1>
   }
   return allProducts.length===0?(
     <div className="allProducts">
