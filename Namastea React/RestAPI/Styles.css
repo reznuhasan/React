@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border: 1px solid slateblue;
+}
+.header .logo h1{
+    color: darkcyan;
+}
+.header .menu ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header .menu ul li{
+    padding:0 10px;
+}
+.header .menu ul li a{
+    font-size: 18px;
+    color:deepskyblue;
+}
+.countries{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap:25px;
+}
+.shimmer-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    gap:25px; 
+}
+.shimmer-wrapper{
+    width: 300px;
+    border: 1px solid salmon;
+    height: 200px;
+    background-color: aliceblue;
+}
+  
