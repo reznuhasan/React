@@ -3,6 +3,7 @@ import { FindCountry } from '../Shared/FindCountry';
 import Country from './Country';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
+import useOnline from '../Shared/useOnline';
 
 function Countries() {
     const [searchText,setSearchText]=useState("")
@@ -19,6 +20,10 @@ function Countries() {
     },[])
     const handleSearch=()=>{
         setCountries(FindCountry(allCountries,searchText))
+    }
+    const isOnline=useOnline();
+    if(!isOnline){
+        return <h1>You are currently Offline,Please check your network</h1>
     }
     return allCountries?.length===0?(
         <div className='shimmer-container'>
