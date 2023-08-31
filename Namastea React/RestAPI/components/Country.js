@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Country = ({country}) => {
+const Country = React.memo(({country}) => {
     const{name,languages,flags,population}=country
+    console.log('render')
   return (
     <div>
       <div className="image">
@@ -14,6 +15,6 @@ const Country = ({country}) => {
       </div>
     </div>
   )
-}
+})
 
 export default Country

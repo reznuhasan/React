@@ -18,9 +18,8 @@ function Countries() {
         loadData()
     },[])
     const handleSearch=()=>{
-        countries=FindCountry(allCountries,searchText)
+        setCountries(FindCountry(allCountries,searchText))
     }
-    console.log(allCountries.length)
     return allCountries?.length===0?(
         <div className='shimmer-container'>
             {
