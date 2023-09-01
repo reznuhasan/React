@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import {Link} from "react-router-dom"
+import { themeContext } from "../Helper/themeContext";
 const Header=()=>{
+    const {themeColor,setThemeColor}=useContext(themeContext)
+    const handleThemeColor=()=>{
+      let color=themeColor==="light"?"dark":"light";
+      setThemeColor(color);
+    }
     return(
-        <div className="header">
+        <div className={themeColor==="light"?"header":"darkHeader"}>
           <div className="logo">
             <h1><Link to="/">ChalDal</Link></h1>
           </div> 
@@ -13,6 +20,9 @@ const Header=()=>{
                 <li><Link to="/instamart">Instamart</Link></li>
                 <li><Link to="/cart">Cart</Link></li>
             </ul>
+          </div>
+          <div className="themeBtn">
+            <button onClick={handleThemeColor}>{themeColor==="light"?"dark":"light"}</button>
           </div>
         </div>
     )

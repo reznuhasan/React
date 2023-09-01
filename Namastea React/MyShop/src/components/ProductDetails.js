@@ -1,11 +1,13 @@
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import Shimmer from "./Shimmer";
 import useProduct from "../Helper/useProduct";
+import { themeContext } from "../Helper/themeContext";
 const ProductDetails = () => {
     const { id } = useParams();
     const product=useProduct(id);
+    const {themeColor}=useContext(themeContext)
     return product === null ? (
        <div style={{
         "display":"flex",
@@ -16,7 +18,7 @@ const ProductDetails = () => {
        </div>
         
     ) : (
-        <div className="product-detail-container">
+        <div className={themeColor==="light"?"product-detail-container":"dark-product-detail-container"}>
             <div className="product-details">
                 <div className="image">
                     <img src={product.thumbnail} alt="product image" />

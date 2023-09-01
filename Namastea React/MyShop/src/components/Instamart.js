@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { themeContext } from '../Helper/themeContext'
 const Section=({title,visible,handleClick,value})=>{
   return(
     <div>
@@ -16,8 +17,9 @@ const Instamart = () => {
   const handleClick=(value)=>{
       setIsVisible(value)
   }
+  const {themeColor}=useContext(themeContext)
   return (
-    <div>
+    <div className={themeColor!=="light" && "darkInstamart"}>
         <Section key={"About Us"} value="about" handleClick={handleClick} visible={isVisible==="about"} title={"This is my About Part"}></Section>
         <Section key={"Product"} value="product" handleClick={handleClick} visible={isVisible==="product"} title={"This is my Product Part"}></Section>
         <Section key={"Contact"} value="contact" handleClick={handleClick} visible={isVisible==="contact"} title={"This is my Contact Part"}></Section>

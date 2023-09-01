@@ -1,11 +1,12 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
+import { themeContext } from '../Helper/themeContext';
 
 const Product = React.memo(({product}) => {
     const {title,rating,brand,category,thumbnail,price}=product;
-    console.log("re -render")
+    const {themeColor}=useContext(themeContext)
   return (
-    <div className='card'>
+    <div className={themeColor==="light"?"card":"darkCard"}>
       <div className="image">
         <img src={thumbnail} alt="product image" />
       </div>

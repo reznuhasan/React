@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .header{
     display: flex;
     justify-content: space-between;
@@ -82,13 +86,88 @@ a{
     justify-content: center;
     align-items: center;
 }
-.product-details{
+.product-detail-container .product-details{
     width: 350px;
     border: 1px solid gray;
     padding: 5px 10px;
     margin: 20px 0;
+    height: 300px;
+  
 }
-.product-details .image img{
+.product-detail-container .product-details .image img{
+    width: 100%;
+    height: 150px;
+}
+.themeBtn{
+    display: flex;
+    align-items: center;
+}
+.themeBtn button{
+    width: 100px;
+    padding: 8px 0;
+    color: white;
+    border: none;
+    background-color: darkgreen;
+}
+
+/* //darkTheme */
+.darkApp{
+    background-color: black;
+    color: whitesmoke;
+}
+.darkHeader{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    border: 1px solid white;
+    padding: 0 10px;
+    background-color: rgba(0, 0, 0, 0.752);
+}
+.darkHeader .logo h1 a{
+    text-decoration: none;
+    color: yellowgreen;
+}
+.darkHeader .menu ul{
+    display: flex;
+}
+.darkHeader .menu ul li{
+    list-style: none;
+    padding: 10px;
+    
+    font-size: 17px;
+}
+.darkHeader .menu ul li a{
+    text-decoration: none;
+    color: goldenrod;
+}
+.darkCard{
+    width: 350px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    background-color: white;
+}
+.darkCard .image img{
+    width: 100%;
+    height: 150px;
+}
+.darkContact,.darkCart,.darkInstamart,.darkAbout{
+    height: 100vh;
+}
+.dark-product-detail-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.dark-product-detail-container .product-details{
+    width: 350px;
+    border: 1px solid gray;
+    padding: 5px 10px;
+    margin: 20px 0;
+    background-color: white;
+    color: black;
+    height: 300px;
+}
+.dark-product-detail-container .product-details .image img{
     width: 100%;
     height: 150px;
 }
