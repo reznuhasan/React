@@ -1,45 +1,53 @@
 import ReactDOM from "react-dom/client"
-import Header from "./components/Header"
+import { lazy, Suspense } from "react";
 import Service from "./components/Service"
-import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import AppLayout from "./Layout/AppLayout"
 import Error from "./components/Error"
 import About from "./components/About"
 import Contact from "./components/Contact"
 import Cart from "./components/Cart"
 import ProductDetails from "./components/ProductDetails"
+import Shimmer from "./components/Shimmer"
 
-const router=createBrowserRouter([
+const About=lazy(()=>import("./components/About"))
+const Instamart = lazy(() => import("./components/Instamart"))
+const router = createBrowserRouter([
     {
-        path:"/",
-        element:<AppLayout/>,
-        errorElement:<Error/>,
-        children:[
+        path: "/",
+        element: <AppLayout />,
+        errorElement: <Error />,
+        children: [
             {
-                path:"/",
-                element:<Service/>
+                path: "/",
+                element: <Service />
             },
             {
-                path:"/about",
-                element:<About/>
+                path: "/about",
+                element: <Suspense fallback={<Shimmer/>}><About /></Suspense>
             },
             {
-                path:"/contact",
-                element:<Contact/>
+                path: "/contact",
+                element: <Contact />
             },
             {
-                path:"/cart",
-                element:<Cart/>
+                path: "/cart",
+                element: <Cart />
             },
             {
-                path:"/product/:id",
-                element:<ProductDetails/>
+                path: "/product/:id",
+                element: <ProductDetails />
+            },
+            {
+                path: "/instamart",
+                element:<Suspense fallback={<Shimmer/>} ><Instamart /> </Suspense>
+
             }
         ]
 
     }
 ])
 
-const root=ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<RouterProvider router={router}/>)
+root.render(<RouterProvider router={router} />)
