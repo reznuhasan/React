@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import {Link} from "react-router-dom"
 import { themeContext } from "../Helper/themeContext";
+import { useSelector } from "react-redux";
 const Header=()=>{
     const {themeColor,setThemeColor}=useContext(themeContext)
     const handleThemeColor=()=>{
       let color=themeColor==="light"?"dark":"light";
       setThemeColor(color);
     }
+    const items=useSelector(state=>state.product.items)
     return(
         <div className={themeColor==="light"?"header":"darkHeader"}>
           <div className="logo">
@@ -18,7 +20,7 @@ const Header=()=>{
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
                 <li><Link to="/instamart">Instamart</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
+                <li><Link to="/cart">Cart-{items.length}</Link></li>
             </ul>
           </div>
           <div className="themeBtn">
