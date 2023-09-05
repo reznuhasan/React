@@ -30,3 +30,6 @@
     color: whitesmoke;
     margin-top: 4px;
 }
+.form-error{
+    margin-top: -2px;
+}
