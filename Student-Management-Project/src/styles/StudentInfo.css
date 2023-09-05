@@ -1,0 +1,32 @@
+.student-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.personal-info-form{
+    width: 700px;
+}
+.student-info .personal-info-form .inputField{
+    margin: 3px 0;
+}
+.student-info .personal-info-form input{
+    width: 100%;
+    padding: 6px 0;
+}
+.student-info .personal-info-form .personal-info-selection{
+    display: flex;
+    justify-content: space-between;
+}
+.student-info .personal-info-form .personal-info-selection select{
+    padding: 6px 0;
+    margin: 5px 0;
+}
+.nextButton{
+    width: 150px;
+    padding: 10px 0;
+    background-color: #28A745;
+    border: none;
+    color: whitesmoke;
+    margin-top: 4px;
+}
