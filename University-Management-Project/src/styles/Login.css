@@ -1,0 +1,33 @@
+.loginContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.login{
+    width: 600px;
+    border: 1px solid salmon;
+    padding: 5px;
+}
+.inputField{
+    margin: 3px 0;
+}
+.login input{
+    width: 99%;
+    padding: 6px 0;
+}
+.login .password{
+    position: relative;
+}
+.login .loginBtn{
+    width: 100%;
+    padding:6px 0;
+    margin-top: 5px;
+    background-color: green;
+    border: none;
+    color: whitesmoke;
+}
+.eyeIconBox{
+    position: absolute;
+    top:25%;
+    right: 10px;
+}
