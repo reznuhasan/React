@@ -5,6 +5,7 @@ import ErrorPage from "./components/ErrorPage";
 import StudentInfo from "./components/StudentInfo";
 import Admission from "./Layout/Admission";
 import Login from "./components/Login";
+import ParentInfo from "./components/ParentInfo";
 
 const router=createBrowserRouter([
     {
@@ -13,12 +14,16 @@ const router=createBrowserRouter([
         errorElement:<ErrorPage/>,
         children:[
             {
-                path:"/register",
+                path:"/admission",
                 element:<Admission/>,
                 children:[
                     {
-                        path:"/register",
+                        path:"/admission",
                         element:<StudentInfo/>
+                    },
+                    {
+                        path:"familyInfo",
+                        element:<ParentInfo/>
                     }
                 ]
             },

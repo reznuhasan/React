@@ -21,6 +21,7 @@ const initialValues = {
   passportNo: "",
 }
 
+
 const StudentInfo = () => {
   const navigate=useNavigate()
   const formik = useFormik({

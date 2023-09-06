@@ -1,0 +1,42 @@
+.parent-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parent-info-form{
+    width: 700px;
+}
+.parent-info .parent-info-form .inputField{
+    margin: 3px 0;
+}
+.parent-info .parent-info-form input{
+    width: 100%;
+    padding: 6px 0;
+}
+/* .parent-info .parent-info-form .parent-info-selection{
+    display: flex;
+    justify-content: space-between;
+}
+.parent-info .parent-info-form .parent-info-selection select{
+    padding: 6px 0;
+    margin: 5px 0;
+} */
+.checkField{
+    display: flex;
+}
+.radioButtonPart{
+    display: flex;
+}
+.nextButton{
+    width: 150px;
+    padding: 10px 0;
+    background-color: #28A745;
+    border: none;
+    color: whitesmoke;
+    margin-top: 4px;
+}
+.form-error{
+    margin-top: -2px;
+    color: red;
+}
