@@ -2,15 +2,29 @@ import React from 'react'
 import '../styles/CgpaCalculator.css'
 const CgpaCalculator = ({subject,findSubjectCode}) => {
     console.log(subject)
+    const handleRemoveCourse=(e)=>{
+        e.preventDefault()
+        findSubjectCode(subject)
+    }
   return (
     <div className='cgpa-calculator'>
       <div className='inputField'>
         <label htmlFor="courseName">Course Name:</label>
-        <input type="text" name="courseName" id="courseName" />
+        <input 
+        type="text" 
+        name="courseName" 
+        id="courseName" 
+        placeholder='enter your course name'
+        />
       </div>
       <div className='inputField'>
         <label htmlFor="courseCredit">Course Credit:</label>
-        <input type="number" name="courseCredit" id="courseCredit" />
+        <input 
+        type="number" 
+        name="courseCredit" 
+        id="courseCredit" 
+        placeholder='enter your course credit'
+        />
       </div>
       <div>
         <select>
@@ -27,7 +41,7 @@ const CgpaCalculator = ({subject,findSubjectCode}) => {
             <option value="F">F</option>
         </select>
       </div>
-      <button onClick={()=>findSubjectCode()}>Remove Course</button>
+      <button onClick={handleRemoveCourse}>Remove Course</button>
     </div>
   )
 }
