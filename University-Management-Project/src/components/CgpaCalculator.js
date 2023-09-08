@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/CgpaCalculator.css'
-const CgpaCalculator = ({subject,findSubjectCode}) => {
+const CgpaCalculator = ({subject,findSubjectCode,formik}) => {
     console.log(subject)
     const handleRemoveCourse=(e)=>{
         e.preventDefault()
@@ -15,6 +15,7 @@ const CgpaCalculator = ({subject,findSubjectCode}) => {
         name="courseName" 
         id="courseName" 
         placeholder='enter your course name'
+        onChange={formik.handleChange}
         />
       </div>
       <div className='inputField'>

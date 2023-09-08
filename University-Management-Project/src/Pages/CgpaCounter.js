@@ -6,9 +6,10 @@ const CgpaCounter = () => {
   const [subjects, setSubjects] = useState([0, 1, 2]);
   const handleAddCourse = (e) => {
     e.preventDefault()
+    console.log(subjects)
     setSubjects(prevState => [
       ...prevState,
-      subjects.length
+      subjects[subjects.length-1]+1
     ])
   }
   const findSubjectCode = (code) => {
@@ -17,7 +18,7 @@ const CgpaCounter = () => {
   }
   const formik=useFormik({
     initialValues:{
-
+        
     },
     onSubmit:(values)=>{
       console.log(values)
@@ -30,7 +31,7 @@ const CgpaCounter = () => {
       </div>
       <form onSubmit={formik.handleSubmit}>
         {
-          subjects.map(subject => <CgpaCalculator subject={subject} key={subject} findSubjectCode={findSubjectCode}></CgpaCalculator>)
+          subjects.map(subject => <CgpaCalculator subject={subject} key={subject} findSubjectCode={findSubjectCode} formik={formik}></CgpaCalculator>)
         }
         <button onClick={handleAddCourse}>Add Course</button>
         <button type='submit'>Done</button>
