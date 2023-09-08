@@ -1,11 +1,12 @@
 import ReactDOM from "react-dom/client"
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./Layout/App";
-import ErrorPage from "./components/ErrorPage";
-import StudentInfo from "./components/StudentInfo";
+import ErrorPage from "./Pages/ErrorPage";
+import StudentInfo from "./Pages/StudentInfo";
 import Admission from "./Layout/Admission";
-import Login from "./components/Login";
-import ParentInfo from "./components/ParentInfo";
+import Login from "./Pages/Login";
+import ParentInfo from "./Pages/ParentInfo";
+import CgpaCounter from "./Pages/CgpaCounter";
 
 const router=createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router=createBrowserRouter([
                         element:<ParentInfo/>
                     }
                 ]
+            },
+            {
+                path:"/cgpa-calculator",
+                element:<CgpaCounter/>
             },
             {
                 path:"/login",

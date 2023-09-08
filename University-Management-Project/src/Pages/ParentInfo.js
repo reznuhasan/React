@@ -52,7 +52,9 @@ const ParentInfo = () => {
                         id="fatherName"
                         value={formik.values.fatherName}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your father name'
+                        />
                     {formik.errors.fatherName && formik.touched.fatherName ? <p className='form-error'>{formik.errors.fatherName}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -63,7 +65,9 @@ const ParentInfo = () => {
                         id="fatherPhone"
                         value={formik.values.fatherPhone}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your father phone number'
+                        />
                     {formik.errors.fatherPhone && formik.touched.fatherPhone ? <p className='form-error'>{formik.errors.fatherPhone}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -74,7 +78,9 @@ const ParentInfo = () => {
                         id="fatherOcupation"
                         value={formik.values.fatherOcupation}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your father Ocupation'
+                        />
                     {formik.errors.fatherOcupation && formik.touched.fatherOcupation ? <p className='form-error'>{formik.errors.fatherOcupation}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -85,7 +91,9 @@ const ParentInfo = () => {
                         id="fatherDesignation"
                         value={formik.values.fatherDesignation}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur}
+                        placeholder='Enter your father Designation' 
+                        />
                     {formik.errors.fatherDesignation && formik.touched.fatherDesignation ? <p className='form-error'>{formik.errors.fatherDesignation}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -96,7 +104,9 @@ const ParentInfo = () => {
                         id="motherName"
                         value={formik.values.motherName}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your mother name'
+                        />
                     {formik.errors.motherName && formik.touched.motherName ? <p className='form-error'>{formik.errors.motherName}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -107,7 +117,9 @@ const ParentInfo = () => {
                         id="motherPhone"
                         value={formik.values.motherPhone}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your mother phone number'
+                        />
                     {formik.errors.motherPhone && formik.touched.motherPhone ? <p className='form-error'>{formik.errors.motherPhone}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -118,7 +130,9 @@ const ParentInfo = () => {
                         id="motherOcupation"
                         value={formik.values.motherOcupation}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your mother ocupation'
+                        />
                     {formik.errors.motherOcupation && formik.touched.motherOcupation ? <p className='form-error'>{formik.errors.motherOcupation}</p> : ""}
                 </div>
 
@@ -130,7 +144,9 @@ const ParentInfo = () => {
                         id="motherDesignation"
                         value={formik.values.motherDesignation}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your mother designation'
+                        />
                     {formik.errors.motherDesignation && formik.touched.motherDesignation ? <p className='form-error'>{formik.errors.motherDesignation}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -141,18 +157,22 @@ const ParentInfo = () => {
                         id="totalFamilyMembers"
                         value={formik.values.totalFamilyMembers}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your total family members'
+                        />
                     {formik.errors.totalFamilyMembers && formik.touched.totalFamilyMembers ? <p className='form-error'>{formik.errors.totalFamilyMembers}</p> : ""}
                 </div>
                 <div className="inputField">
-                    <label htmlFor='totalSister'>totalSister:</label>
+                    <label htmlFor='totalSister'>Total Sister's Number:</label>
                     <input
                         type="number"
                         name="totalSister"
                         id="totalSister"
                         value={formik.values.totalSister}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your total sister number'
+                        />
                     {formik.errors.totalSister && formik.touched.totalSister ? <p className='form-error'>{formik.errors.totalSister}</p> : ""}
                 </div>
                 <div className="inputField">
@@ -163,7 +183,9 @@ const ParentInfo = () => {
                         id="totalBrother"
                         value={formik.values.totalBrother}
                         onChange={formik.handleChange}
-                        onBlur={formik.handleBlur} />
+                        onBlur={formik.handleBlur} 
+                        placeholder='Enter your total brothers number'
+                        />
                     {formik.errors.totalBrother && formik.touched.totalBrother ? <p className='form-error'>{formik.errors.totalBrother}</p> : ""}
                 </div>
                 <div>
@@ -201,6 +223,7 @@ const ParentInfo = () => {
                             value="yes"
                             checked={formik.values.parentFreedomFighter === "yes"}
                             onChange={formik.handleChange}
+                           
                         />
                         <label htmlFor="parentFreedomFighter">Yes</label>
                     </div>
@@ -227,6 +250,7 @@ const ParentInfo = () => {
                                 value={formik.values.fighterCertificate}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
+                                placeholder='submit freedom fighter certificate'
                             />
                             {formik.errors.fighterCertificate &&
                                 formik.touched.fighterCertificate ? (

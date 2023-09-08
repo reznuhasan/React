@@ -30,7 +30,7 @@ const StudentInfo = () => {
     onSubmit: (values, action) => {
       console.log(values);
       if(formik.isValid){
-        navigate('/')
+        navigate('/admission/familyInfo')
       }
       action.resetForm()
     },
@@ -48,6 +48,7 @@ const StudentInfo = () => {
             onChange={formik.handleChange}
             value={formik.values.firstName}
             onBlur={formik.handleBlur}
+            placeholder='Enter your first name'
           />
           {formik.errors.firstName && formik.touched.firstName?<p className='form-error'>{formik.errors.firstName}</p>:""}
         </div>
@@ -60,6 +61,7 @@ const StudentInfo = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.lastName}
+            placeholder='Enter your last name'
           />
           {formik.errors.lastName && formik.touched.lastName?<p className='form-error'>{formik.errors.lastName}</p>:""}
         </div>
@@ -72,6 +74,7 @@ const StudentInfo = () => {
             onChange={formik.handleChange}
             value={formik.values.nickName}
             onBlur={formik.handleBlur}
+            placeholder='Enter your nick name'
           />
           {formik.errors.nickName && formik.touched.nickName?<p className='form-error'>{formik.errors.nickName}</p>:""}
         </div>
@@ -84,6 +87,7 @@ const StudentInfo = () => {
             onChange={formik.handleChange}
             value={formik.values.phone}
             onBlur={formik.handleBlur}
+            placeholder='Enter your phone number'
           />
           {formik.errors.phone && formik.touched.phone?<p className='form-error'>{formik.errors.phone}</p>:""}
         </div>
@@ -96,6 +100,7 @@ const StudentInfo = () => {
             onChange={formik.handleChange}
             value={formik.values.email}
             onBlur={formik.handleBlur}
+            placeholder='Enter your  email address'
           />
           {formik.errors.email && formik.touched.email?<p className='form-error'>{formik.errors.email}</p>:""}
         </div>
