@@ -1,34 +1,40 @@
 import React from 'react'
 import '../styles/CgpaCalculator.css'
-const CgpaCalculator = ({subject,findSubjectCode,formik}) => {
-    console.log(subject)
+const CgpaCalculator = ({subject,RemoveCourse,formik}) => {
     const handleRemoveCourse=(e)=>{
         e.preventDefault()
-        findSubjectCode(subject)
+        RemoveCourse(subject)
     }
   return (
     <div className='cgpa-calculator'>
       <div className='inputField'>
-        <label htmlFor="courseName">Course Name:</label>
+        <label htmlFor={`courses[${subject}].courseName`}>Course Name:</label>
         <input 
         type="text" 
-        name="courseName" 
-        id="courseName" 
+        name={`courses[${subject}].courseName`}
+        id={`courses[${subject}].courseName`} 
         placeholder='enter your course name'
         onChange={formik.handleChange}
+        value={formik.values.courses[subject]?.courseName}
         />
       </div>
       <div className='inputField'>
-        <label htmlFor="courseCredit">Course Credit:</label>
+        <label htmlFor={`courses[${subject}].courseCredit`}>Course Credit:</label>
         <input 
         type="number" 
-        name="courseCredit" 
-        id="courseCredit" 
+        name={`courses[${subject}].courseCredit`}
+        id={`courses[${subject}].courseCredit`}
         placeholder='enter your course credit'
+        onChange={formik.handleChange}
+        value={formik.values.courses[subject]?.courseCredit}
         />
       </div>
       <div>
-        <select>
+        <select 
+        name={`courses[${subject}].grade`} 
+        id={`courses[${subject}].courseCredit`} 
+        onChange={formik.handleChange} 
+        >
             <option value="">select your grade</option>
             <option value="A+">A+</option>
             <option value="A">A</option>
