@@ -15,8 +15,8 @@ const CgpaCounter = () => {
     })),
   },
   onSubmit:values=>{
-     const count=calculateCgpa(values.courses)
-     console.log(count)
+     const countCgpa=calculateCgpa(values.courses)
+     setCgpa(countCgpa)
   }
 })
 const handleAddCourse=(e)=>{
@@ -47,7 +47,7 @@ const RemoveCourse = (code) => {
         <button type='submit'>Done</button>
       </form>
       <div>
-
+        {cgpa!==null?<h1>Your Cgpa is:{cgpa}</h1>:""}
       </div>
     </div>
   )
