@@ -1,0 +1,18 @@
+.logo{
+    position: relative;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.logo h1{
+    position: absolute;
+    top:60%;
+    left: 20%;
+    font-family:'Simonetta', cursive;
+    color: #001D4D;
+}
