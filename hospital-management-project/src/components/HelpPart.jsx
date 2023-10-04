@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const HelpPart = () => {
   return (
-    <div>
+    <div className={Styles.HelpPart}>
         <h1 className={Styles.title}>How Can We Help?</h1>
         <div className={Styles.menu}>
           <div>
