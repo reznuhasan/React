@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Styles from "../Styles/Carousel.css"
+import "../Styles/Carousel.css"
 import slide1 from '../assets/slider1.jpg';
 import slide2 from '../assets/slider2.jpg'
 import slide3 from '../assets/slider3.jpg'
@@ -25,7 +25,7 @@ const Carousel = () => {
             <Swiper
                 pagination={pagination}
                 modules={[Pagination,Autoplay]}
-                className={Styles.mySwiper}
+                className="mySwiper"
                 autoplay={{
                     delay:3500,
                     disableOnInteraction: false,
