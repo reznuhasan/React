@@ -30,7 +30,7 @@ const Carousel = () => {
                     delay:3500,
                     disableOnInteraction: false,
                   }}
-                  style={{"height":"500px"}}
+                  style={{"height":"520px"}}
             >
                 <SwiperSlide>
                     <img src={slide1} style={{"height":"500px"}}/>

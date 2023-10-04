@@ -36,9 +36,7 @@
     color:#001D4D;
     font-size: 17px;
 }
-.auth svg{
-    text-decoration: none;
-    padding: 0 40px;
-    font-size: 25px;
-    color:blue;
+.icon{
+    padding-right: 25px;
+    color: blue;
 }
