@@ -2,6 +2,7 @@ import React from 'react'
 import HelpPart from '../components/HelpPart'
 import Carousel from '../components/Carousel'
 import Styles from "../Styles/Home.module.css"
+import BorderBox from '../components/BorderBox'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
             <Carousel/>
             <HelpPart/>
         </div>
+        <BorderBox/>
     </div>
   )
 }
