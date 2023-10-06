@@ -36,7 +36,6 @@
     padding: 0px 80px;
     display: flex;
     justify-content: space-between;
-    margin: auto 0;
 }
 
 .missionImage img {
@@ -57,4 +56,59 @@
     font-weight: 500;
     line-height: 22.8px;
     color: rgb(15, 35, 77);
+    text-align: justify;
+}
+/* *********************************
+          Item Box Part
+********************************* */
+.itemBox{
+    padding: 30px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.itemBoxValue{
+    width: 30%;
+    margin-top: 30px;
+}
+.itemBoxValue h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: rgb(125, 199, 243)
+}
+.itemBoxValue p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.8px;
+    color: rgb(15, 35, 77);
+    text-align: justify;
+}
+.box{
+    padding:30px 25px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-top: 30px;
+    gap:6px;
+}
+.box img{
+    margin-top: 20px;
+    height: 50px;
+}
+.boxContent{
+    margin-left: 15px;
+}
+
+.boxContent h1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: rgb(255, 255, 255)
+}
+.boxContent p{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: rgb(255, 255, 255)
 }
