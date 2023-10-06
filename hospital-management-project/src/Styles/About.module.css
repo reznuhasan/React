@@ -1,15 +1,16 @@
-.image img{
+.image img {
     width: 100%;
     margin-bottom: -10px;
 }
 
-.aboutDetails{
+.aboutDetails {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: 100px 30px;
+    width: 85%;
+    margin: 100px;
 }
-.aboutDetailsTitle{
+
+.aboutDetailsTitle {
     width: 32%;
     border-right: 1px solid slateblue;
     display: flex;
@@ -19,10 +20,41 @@
     font-size: 14px;
     font-weight: 600;
 }
-.aboutDetailsContent{
+
+.aboutDetailsContent {
     width: 30%;
     font-size: 15px;
     font-weight: 400;
     text-align: justify;
     line-height: 21px;
+}
+
+/* *********************************
+          Mission Part
+********************************* */
+.aboutMission {
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0;
+}
+
+.missionImage img {
+    width: 400px;
+}
+.missionContent{
+    margin-top: 20px;
+    width: 300px;
+}
+.missionContent h1 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    color: rgb(125, 199, 243)
+}
+.missionContent p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.8px;
+    color: rgb(15, 35, 77);
 }
