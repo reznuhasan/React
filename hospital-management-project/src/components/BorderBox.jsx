@@ -2,7 +2,7 @@ import React from 'react'
 
 const BorderBox = () => {
   return (
-    <div style={{"display":"flex","marginBottom":"5px","marginTop":"8px"}}>
+    <div style={{"display":"flex","marginTop":"8px"}}>
         <div className="box1" style={{"width":"25%","height":"15px","backgroundColor":"#0B1934"}}>
         </div>
         <div className="box1" style={{"width":"25%","height":"15px","backgroundColor":"#7C6698"}}>
