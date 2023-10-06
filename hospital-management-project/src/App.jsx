@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom"
 import Root from "./Layout/Root"
 import Home from "./Pages/Home"
 import Doctors from "./Pages/Doctors"
+import DoctorProfile from "./Pages/DoctorProfile"
 
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
          {
           path:"/doctors",
           element:<Doctors/>
+         },
+         {
+          path:"/profile",
+          element:<DoctorProfile/>
          }
       ]
     }
