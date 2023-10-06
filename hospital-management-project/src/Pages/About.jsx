@@ -104,6 +104,21 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            {/* impact part */}
+            <div className={Styles.impact}>
+                <h1>Impact drives everything that we do</h1>
+                <div className={Styles.impactBox}>
+                    <div className={Styles.impactContent}>
+                        <p>Evercare is disrupting the traditional healthcare model with its integrated cross-continents platform, its impact driven model and quality driven hospitals, creating a profitable double bottom line. As a ‘for profit and impact driven’ integrated healthcare group in Asia and Africa, Evercare is transforming the health and wellbeing of residents by providing access to services they may not have had access to previously. We invest in hospitals, clinics and diagnostic centres that offer services meeting the key healthcare needs of each market’s population and providing screening and care to support the significant rise in non-communicable diseases within these countries.</p>
+                    </div>
+                    <div className={Styles.line}>
+
+                    </div>
+                    <div className={Styles.impactContent}>
+                        <p>Evercare’s robust healthcare model demonstrates that there is synergy in purpose and profitability and ensures financial viability through effective asset and resource utilisation with a focus on empowering people to take a role in their own health. We understand the fundamental connection between healthy patients, a safe and collaborative work environment, and a sustainable ecosystem. As a global and local healthcare operator, we have a corporate responsibility to demonstrate our commitment and leadership in our business practices, healthcare facilities, and through our people.</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     )
