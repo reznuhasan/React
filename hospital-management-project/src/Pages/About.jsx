@@ -8,6 +8,8 @@ import box2 from "../assets/box2.png"
 import box3 from "../assets/box3.png"
 import box4 from "../assets/box4.png"
 import box5 from "../assets/box5.png"
+import hospital from "../assets/hospitalAbout.jpg"
+import transforming from "../assets/transformingAbout.jpg"
 const About = () => {
     return (
         <div>
@@ -117,6 +119,26 @@ const About = () => {
                     <div className={Styles.impactContent}>
                         <p>Evercare’s robust healthcare model demonstrates that there is synergy in purpose and profitability and ensures financial viability through effective asset and resource utilisation with a focus on empowering people to take a role in their own health. We understand the fundamental connection between healthy patients, a safe and collaborative work environment, and a sustainable ecosystem. As a global and local healthcare operator, we have a corporate responsibility to demonstrate our commitment and leadership in our business practices, healthcare facilities, and through our people.</p>
                     </div>
+                </div>
+            </div>
+            {/* hospital add part */}
+            <div className={Styles.hospitalAdd}>
+                <img src={hospital} alt="" />
+            </div>
+            {/* Transforming part */}
+            <div className={Styles.transforming}>
+                <div className={Styles.contentBox}>
+                    <h1>Transforming Healthcare</h1>
+                    <p>
+                        Evercare Hospital Dhaka is a 425-bed multidisciplinary super specialty tertiary care hospital which is the first hospital in Bangladesh to have got JCI Accredited. The Joint Commission International (JCI) is a U.S. based accreditation body dedicated to improving healthcare quality and safety around the world. This hospital has the latest in diagnostic equipment and technology, staffed with a team of world–class physicians, trained nurses and technicians in most disciplines of medical science.
+                    </p>
+                </div>
+                <div className={Styles.line}>
+
+                </div>
+                <div className={Styles.transImage}>
+                    <img src={transforming} alt="" />
+
                 </div>
             </div>
 

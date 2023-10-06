@@ -145,3 +145,42 @@
     background-color: blueviolet;
     margin-top: 10px;
 }
+/* *********************************
+          Hospital Add Part
+********************************* */
+.hospitalAdd img{
+    width: 100%;
+    margin: 20px 0;
+} 
+.transforming{
+    padding: 30px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transforming .contentBox{
+    width: 45%;
+}
+.transforming .contentBox h1{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 35px;
+    color: rgb(125, 199, 243);
+}
+.transforming .contentBox p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 23px;
+    color:  rgb(0, 32, 96);
+    text-align: justify;
+    margin-top: 80px;
+
+}
+.transforming .line{
+    width: 2px;
+    height: 250px;
+    background-color: blueviolet;
+}
+.transforming .transImage img{
+    width: 400px;
+}
