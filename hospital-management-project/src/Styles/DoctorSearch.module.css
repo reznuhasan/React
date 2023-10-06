@@ -2,7 +2,7 @@
     position: relative;
 }
 .searchBox{
-    width: 25%;
+    width: 300px;
     margin-top: 10px;
     margin-left: 10px;
     border: 1px solid #DED8EA;
@@ -18,15 +18,14 @@ h2{
     font-weight: 600;
     color:  #826AAC;
 }
-select,input{
+.department select,input{
     width: 80%;
     padding: 10px 0;
     font-size: 15px;
     color: #826AAC;
     margin: 10px 0;
 }
-button{
-
+.department button{
     width: 40%;
     padding: 10px 0;
     border:none;
