@@ -6,7 +6,7 @@ import BorderBox from '../components/BorderBox'
 
 const Home = () => {
   return (
-    <div>
+    <div className={Styles.home}>
         <div className={Styles.heroSection}>
             <Carousel/>
             <HelpPart/>

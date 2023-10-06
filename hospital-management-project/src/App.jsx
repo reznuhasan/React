@@ -3,6 +3,7 @@ import Root from "./Layout/Root"
 import Home from "./Pages/Home"
 import Doctors from "./Pages/Doctors"
 import DoctorProfile from "./Pages/DoctorProfile"
+import About from "./Pages/About"
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
          {
           path:"/profile",
           element:<DoctorProfile/>
+         },
+         {
+          path:"about",
+          element:<About/>
          }
       ]
     }
