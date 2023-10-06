@@ -2,3 +2,27 @@
     width: 100%;
     margin-bottom: -10px;
 }
+
+.aboutDetails{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 100px 30px;
+}
+.aboutDetailsTitle{
+    width: 32%;
+    border-right: 1px solid slateblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(130, 106, 172);
+    font-size: 14px;
+    font-weight: 600;
+}
+.aboutDetailsContent{
+    width: 30%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: justify;
+    line-height: 21px;
+}
